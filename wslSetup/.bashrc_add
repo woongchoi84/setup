@@ -5,10 +5,10 @@ export  TF_CPP_MIN_LOG_LEVEL=2
 alias	src='source ~/.bashrc'
 alias	g='gvim -p'
 alias	t='gnome-terminal'
+alias	git='git add .; git commit -m 'comment'; git push -u origin master;'
 
-function	cd { if (( $#==0 )); then builtin cd ~ && ls; else builtin cd "$@" && ls; fi }
-
-cd
+function	cd	{ if (( $#==0 )); then builtin cd ~ && ls; else builtin cd "$@" && ls; fi }
+cd		.
 
 #export	GTK_IM_MODULE="ibus"
 #export	XMODIFIERS="@im=ibus"
