@@ -90,38 +90,38 @@ set loadplugins
 " Functions
 "==================================================
 
-"==================================================
-" Abbreviate
-"==================================================
-iabbr __email woongchoi@sm.ac.com
-iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
-iabbr <expr> __file expand('%:p')
-iabbr <expr> __name expand('%')
-iabbr <expr> __pwd expand('%:p:h')
-iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
-iabbr <expr> __bash system("which bash")
-
-"==================================================
-" Bundle Setup
-"==================================================
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+""==================================================
+"" Abbreviate
+""==================================================
+"iabbr __email woongchoi@sm.ac.kr
+"iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
+"iabbr <expr> __file expand('%:p')
+"iabbr <expr> __name expand('%')
+"iabbr <expr> __pwd expand('%:p:h')
+"iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
+"iabbr <expr> __bash system("which bash")
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+""==================================================
+"" Bundle Setup
+""==================================================
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"call vundle#end()            " required
+"filetype plugin indent on    " required
+"" To ignore plugin indent changes, instead use:
+""filetype plugin on
+""
+"" Brief help
+"" :PluginList       - lists configured plugins
+"" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+"" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+"" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+""
+"" see :h vundle for more details or wiki for FAQ
+"" Put your non-Plugin stuff after this line
