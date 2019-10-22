@@ -31,9 +31,6 @@ sudo apt-get -y install tcl-dev tk-dev python3-dev python3-pip python3-tk
 #sudo apt-get -y install imagemagick-6.q16hdri
 #sudo apt-get -y install language-pack-ko
 #sudo locale-gen ko_KR.UTF-8
-echo "=================================================="
-echo " Install Essential Tools: complete"
-echo "=================================================="
 
 # [Remove Minor Warning]
 sudo chown -R ${USER}:${USER} ~/.cache
@@ -43,9 +40,6 @@ sudo pip3 install --upgrade pip
 sudo pip3 install numpy pandas scipy matplotlib pillow pypi progress idx2numpy
 sudo pip3 install jupyter jupyterlab
 sudo pip3 install tensorflow
-echo "=================================================="
-echo " pip3 install: complete"
-echo "=================================================="
 
 # [Bash Environment Setup]
 printf "\nsource\t~/.bashrc_add" >> ~/.bashrc
