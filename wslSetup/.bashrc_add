@@ -5,6 +5,7 @@ export  TF_CPP_MIN_LOG_LEVEL=2
 alias	src='source ~/.bashrc'
 alias	g='gvim -p'
 alias	t='gnome-terminal'
+alias	ju='jupyter lab --no-browser'
 alias	gitpush='git add .; git commit -m 'comment'; git push -u origin master;'
 
 function	cd	{ if (( $#==0 )); then builtin cd ~ && ls; else builtin cd "$@" && ls; fi }
