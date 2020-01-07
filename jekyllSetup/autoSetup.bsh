@@ -1,0 +1,16 @@
+#! /bin/bash
+# ==================================================
+#  Coded by Woong
+# ==================================================
+sudo apt-add-repository ppa:brightbox/ruby-ng -y
+sudo apt-get update
+sudo apt-get install ruby2.5 ruby2.5-dev dh-autoreconf
+
+sudo gem update
+sudo gem install jekyll bundler
+jekyll -v
+
+# [Completed Message]
+echo "=================================================="
+echo " Jekyll setting is completed"
+echo "=================================================="
