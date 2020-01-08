@@ -1,0 +1,11 @@
+#! /bin/bash
+# ==================================================
+#  Jupyter Setup
+# ==================================================
+jupyter notebook --generate-config
+jupyter notebook password
+
+# [Completed Message]
+echo "=================================================="
+echo " Jupyter Notebook Setup is completed"
+echo "=================================================="
