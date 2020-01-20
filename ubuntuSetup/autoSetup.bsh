@@ -21,7 +21,7 @@ sudo apt-get -y install cmake clang
 
 # [TensorFlow]
 sudo pip3 install --upgrade pip setuptools
-sudo pip3 install numpy pandas scipy matplotlib pillow pypi progress idx2numpy
+sudo pip3 install numpy pandas scipy matplotlib pillow pypi progress idx2numpy xlrd
 sudo pip3 install jupyter jupyterlab
 sudo pip3 install tensorflow
 
