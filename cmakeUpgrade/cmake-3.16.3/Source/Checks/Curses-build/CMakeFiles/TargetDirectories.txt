@@ -1,2 +1,0 @@
-/home/woong/git/setup/cmakeUpgrade/cmake-3.16.3/Source/Checks/Curses-build/CMakeFiles/rebuild_cache.dir
-/home/woong/git/setup/cmakeUpgrade/cmake-3.16.3/Source/Checks/Curses-build/CMakeFiles/edit_cache.dir
