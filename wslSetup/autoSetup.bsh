@@ -29,7 +29,7 @@ sudo apt-get -y install cmake clang
 sudo pip3 install --upgrade pip setuptools
 sudo pip3 install numpy pandas scipy matplotlib pillow pypi progress idx2numpy xlrd
 sudo pip3 install jupyter jupyterlab
-sudo pip3 install tensorflow
+sudo pip3 install tensorflow==2.0
 
 # [Remove Minor Warning]
 sudo chown -R ${USER}:${USER} ~/.cache
