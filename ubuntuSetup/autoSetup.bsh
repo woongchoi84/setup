@@ -13,6 +13,7 @@ sudo apt-get -y install ftpd ssh git vim-gtk3 nautilus
 sudo apt-get -y install x11-apps xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic dbus-x11
 sudo apt-get -y install gnome-terminal gnome-paint
 sudo apt-get -y install firefox
+sudo apt-get -y install libncurses5
 sudo apt-get -y install fonts-unfonts-core fonts-unfonts-extra fonts-baekmuk fonts-nanum fonts-nanum-coding fonts-nanum-extra
 sudo apt-get -y install tcl-dev tk-dev python3-dev python3-pip python3-tk
 sudo apt-get -y install cmake clang
