@@ -1,3 +1,26 @@
+"==================================================
+" Bundle Setup
+"==================================================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'morhetz/gruvbox'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'majutsushi/tagbar'
+call vundle#end()            " required
+filetype plugin indent on    " required
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+colorscheme gruvbox
 
 "==================================================
 " Map Setting
@@ -20,7 +43,7 @@ map <C-n>     <Esc>:tabnew<CR>
 "==================================================
 " Visual Setting
 "==================================================
-colorscheme torte
+"colorscheme torte
 syntax  on
 set guifont=DejaVu\ Sans\ Mono\ 11
 set linespace=2
@@ -85,7 +108,7 @@ set history=100
 "set smartcase
 set noignorecase
 set loadplugins
-
+set noeb vb
 "==================================================
 " Functions
 "==================================================
@@ -102,26 +125,27 @@ iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
 iabbr <expr> __bash system("which bash")
 
 "==================================================
-" Bundle Setup
+" Remain File Infomation
 "==================================================
-set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype on
+filetype indent on
+filetype plugin on
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+au BufNewFile,BufReadPost Makefile set noexpandtab
+
+set showcmd
+set cmdheight=1
+set laststatus=2
+"set statusline=\(%n\)%<%f\ %h%m%r%=0x%B\ \ \ \ %-14.(%l,%c%V%)\ %P
+
+"When editing a file, always jump to the last known cursor position
+au BufReadPost *
+ \ if line("'\"") > 0 && line("\"") <= line("$") |
+ \   exe "normal g`\"" |
+ \ endif
+
+augroup AutoSaveFolds
+	autocmd!
+	autocmd BufWinLeave * mkview
+	autocmd BufWinEnter * silent loadview
+augroup END
