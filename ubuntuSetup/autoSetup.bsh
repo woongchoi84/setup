@@ -16,37 +16,34 @@ sudo apt-get -y install firefox
 sudo apt-get -y install fonts-unfonts-core fonts-unfonts-extra fonts-baekmuk fonts-nanum fonts-nanum-coding fonts-nanum-extra
 sudo apt-get -y install tcl-dev tk-dev python3-dev python3-pip python3-tk
 sudo apt-get -y install cmake clang ctags
-#sudo apt-get -y install language-pack-ko
-#sudo locale-gen ko_KR.UTF-8
 
-# [TensorFlow]
-sudo pip3 install --upgrade pip launchpadlib setuptools
+# [Vim Upgrade]
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt-get -y update
+sudo apt-get -y install vim
+
+# [Python]
+sudo pip3 install --upgrade pip launchpadlib setuptools keyrings.alt
 sudo pip3 install numpy pandas scipy matplotlib pillow pypi progress idx2numpy xlrd
 sudo pip3 install jupyter jupyterlab
+# [TensorFlow]
 sudo pip3 install tensorflow
 
 # [Pytorch]
 sudo pip3 install torch torchvision
 
-# [Remove Minor Warning]
-#sudo chown -R ${USER}:${USER} ~/.cache
-
-# [Bash Environment Setup]
-printf "\nsource\t~/.bashrc_add" >> ~/.bashrc
-cp .bashrc_add ~
-cp .vimrc ~
-
 # [Vim Plugin Install]
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt update
-sudo apt install vim
-
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 sudo apt-get install g++-8
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 python3 ~/.vim/bundle/YouCompleteMe/install.py
+
+# [Bash Environment Setup]
+printf "\nsource\t~/.bashrc_add" >> ~/.bashrc
+cp .bashrc_add ~
+cp .vimrc ~
 
 # [Completed Message]
 echo "=================================================="

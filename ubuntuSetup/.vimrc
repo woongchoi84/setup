@@ -29,16 +29,18 @@ nmap ,s :source ~/.vimrc<cr>
 nmap ,v :e ~/.vimrc<cr>
 nmap ,q :q!<cr>
 
-map <F2> :vs ./<CR>
-map <F3> :sp ./<CR>
-map <F4> :q!<CR>
-map <F5> :set syntax=spice<CR>
-map <F6> :set syntax=verilog<CR>
-map <F7> :set syntax=tcl<CR>
-map <F8> :set syntax=skill<CR>
-map <C-Left>  <Esc>:tabprev<CR>
-map <C-Right> <Esc>:tabnext<CR>
-map <C-n>     <Esc>:tabnew<CR>
+map <F2>		:vs ./<CR>
+map <F3>		:sp ./<CR>
+map <F4>		:q!<CR>
+map <F5>		:set syntax=spice<CR>
+map <F6>		:set syntax=verilog<CR>
+map <F7>		:set syntax=tcl<CR>
+map <F8>		:set syntax=skill<CR>
+map <F12>		:TagbarToggle<CR>
+map <C-Left>	:tabprev<CR>
+map <C-Right>	:tabnext<CR>
+map <C-n>		:tabnew<CR>
+map <C-S-CR>	:term<CR>
 
 "==================================================
 " Visual Setting
@@ -109,9 +111,6 @@ set history=100
 set noignorecase
 set loadplugins
 set noeb vb
-"==================================================
-" Functions
-"==================================================
 
 "==================================================
 " Abbreviate
@@ -125,8 +124,10 @@ iabbr <expr> __branch system("git rev-parse --abbrev-ref HEAD")
 iabbr <expr> __bash system("which bash")
 
 "==================================================
-" Remain File Infomation
+" Functions
 "==================================================
+" Remain File Infomation
+"--------------------------------------------------
 filetype on
 filetype indent on
 filetype plugin on
