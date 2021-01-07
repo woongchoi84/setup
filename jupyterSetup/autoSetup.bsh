@@ -5,6 +5,19 @@
 jupyter notebook --generate-config
 jupyter notebook password
 
+# ==================================================
+#  Jupyter w/ Cling
+# ==================================================
+wget https://root.cern/download/cling/cling_2020-11-05_ROOT-ubuntu18.04.tar.bz2
+tar xvf cling_2020-11-05_ROOT-ubuntu18.04.tar.bz2
+rm -rf cling_2020-11-05_ROOT-ubuntu18.04.tar.bz2
+mkdir -p ~/tools
+mv cling_2020-11-05_ROOT-ubuntu18.04 ~/tools
+export CLING_HOME=/home/${USER}/tools/cling_2020-11-05_ROOT-ubuntu18.04
+export PATH=$CLING_HOME/bin:$PATH
+sudo python3 $CLING_HOME/share/cling/Jupyter/kernel/setup.py install
+jupyter kernelspec install --user $CLING_HOME/share/cling/Jupyter/kernel/cling-cpp17
+
 # [Completed Message]
 echo "=================================================="
 echo " Jupyter Notebook Setup is completed"
